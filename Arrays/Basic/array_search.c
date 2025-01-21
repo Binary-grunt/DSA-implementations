@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to print the elements of an array
-void printArr(int arr[], int n) {
+void print_arr(int arr[], int n) {
   for (int i = 0; i < n; i++) {
     printf("arr[%d] = %d, ", i, arr[i]);
   }
@@ -9,7 +9,7 @@ void printArr(int arr[], int n) {
 }
 
 // Function to search for an element in the array
-void findElement(int arr[], int target, int n) {
+void search_arr(int arr[], int target, int n) {
   int found = 0;
   for (int i = 0; i < n; i++) {
     if (arr[i] == target) {
@@ -28,9 +28,9 @@ int main() {
   int n = sizeof(arr) / sizeof(arr[0]);
 
   printf("Given array elements are:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   // Search for an element in the array
   printf("\nSearching for element %d:\n", target);
-  findElement(arr, target, n);
+  search_arr(arr, target, n);
 }

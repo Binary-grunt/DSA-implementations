@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to print the elements of an array
-void printArr(int arr[], int n) {
+void print_arr(int arr[], int n) {
   for (int i = 0; i < n; i++) {
     printf("arr[%d] = %d, ", i, arr[i]);
   }
@@ -9,7 +9,7 @@ void printArr(int arr[], int n) {
 }
 
 // Function to update an element in the array
-void updateElement(int arr[], int n, int index, int newValue) {
+void update_arr(int arr[], int n, int index, int newValue) {
   if (index < 0 || index >= n) {
     printf("Error: Index %d is out of bounds.\n", index);
     return;
@@ -25,13 +25,13 @@ int main() {
   int index = 2, newValue = 25;
 
   printf("Original array elements are:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   // Update an element at a specific index
-  updateElement(arr, n, index, newValue);
+  update_arr(arr, n, index, newValue);
 
   printf("\nArray elements after update:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   return 0;
 }

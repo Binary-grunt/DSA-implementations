@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to print the elements of an array
-void printArr(int arr[], int n) {
+void print_arr(int arr[], int n) {
   for (int i = 0; i < n; i++) {
     printf("arr[%d] = %d, ", i, arr[i]);
   }
@@ -9,7 +9,7 @@ void printArr(int arr[], int n) {
 }
 
 // Function to delete an element from the array
-int deleteElement(int arr[], int target, int *n) {
+int delete_arr(int arr[], int target, int *n) {
   int found = 0;
   // Search for the element and shift elements if found
   for (int i = 0; i < *n; i++) {
@@ -35,15 +35,15 @@ int main() {
   int n = sizeof(arr) / sizeof(arr[0]);
 
   printf("Given array elements are:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   // Attempt to delete an element
-  if (deleteElement(arr, target, &n)) {
+  if (delete_arr(arr, target, &n)) {
     printf("\nElement %d deleted successfully.\n", target);
   } else {
     printf("\nElement %d not found in the array.\n", target);
   }
 
   printf("\nElements of array after deletion:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 }

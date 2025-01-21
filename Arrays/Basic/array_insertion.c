@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Function to print the elements of an array
-void printArr(int arr[], int n) {
+void print_arr(int arr[], int n) {
   for (int i = 0; i < n; i++) {
     printf("arr[%d] = %d,  ", i, arr[i]);
   }
@@ -9,7 +9,7 @@ void printArr(int arr[], int n) {
 }
 
 // Function to insert an element into an array
-void insertElement(int arr[], int target, int pos, int *n) {
+void insert_arr(int arr[], int target, int pos, int *n) {
   // Shift elements to the right to make space for the new element
   for (int i = *n; i >= pos; i--) {
     arr[i] = arr[i - 1];
@@ -24,13 +24,13 @@ int main() {
   int n = sizeof(arr) / sizeof(arr[0]);
 
   printf("Array elements before insertion:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   // Insert the element into the array
-  insertElement(arr, target, pos, &n);
+  insert_arr(arr, target, pos, &n);
 
   printf("Array elements after insertion:\n");
-  printArr(arr, n);
+  print_arr(arr, n);
 
   return 0;
 }
