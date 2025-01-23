@@ -10,36 +10,6 @@ int **allocateMatrix(int rows, int cols) {
   return matrix;
 }
 
-// Function to free dynamically allocated memory of a matrix
-void freeMatrix(int **matrix, int rows) {
-  for (int i = 0; i < rows; i++) {
-    free(matrix[i]);
-  }
-  free(matrix);
-}
-
-// Function to input elements of a matrix
-void inputMatrix(int **matrix, int rows, int cols) {
-  printf("Enter elements for a %dx%d matrix:\n", rows, cols);
-  for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < cols; j++) {
-      printf("matrix[%d][%d]: ", i, j);
-      scanf("%d", &matrix[i][j]);
-    }
-  }
-}
-
-// Function to display the elements of a matrix
-void displayMatrix(int **matrix, int rows, int cols) {
-  printf("Matrix (%dx%d):\n", rows, cols);
-  for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < cols; j++) {
-      printf("%d ", matrix[i][j]);
-    }
-    printf("\n");
-  }
-}
-
 // Function to add two matrices
 int **addMatrices(int **matrix1, int **matrix2, int rows, int cols) {
   int **result = allocateMatrix(rows, cols);
@@ -69,6 +39,36 @@ int **multiplyMatrices(int **matrix1, int r1, int c1, int **matrix2, int r2,
     }
   }
   return result;
+}
+
+// Function to free dynamically allocated memory of a matrix
+void freeMatrix(int **matrix, int rows) {
+  for (int i = 0; i < rows; i++) {
+    free(matrix[i]);
+  }
+  free(matrix);
+}
+
+// Function to input elements of a matrix
+void inputMatrix(int **matrix, int rows, int cols) {
+  printf("Enter elements for a %dx%d matrix:\n", rows, cols);
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      printf("matrix[%d][%d]: ", i, j);
+      scanf("%d", &matrix[i][j]);
+    }
+  }
+}
+
+// Function to display the elements of a matrix
+void displayMatrix(int **matrix, int rows, int cols) {
+  printf("Matrix (%dx%d):\n", rows, cols);
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      printf("%d ", matrix[i][j]);
+    }
+    printf("\n");
+  }
 }
 
 // Main function
