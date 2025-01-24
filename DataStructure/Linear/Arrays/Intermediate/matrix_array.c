@@ -11,7 +11,6 @@ int **allocateMatrix(int rows, int cols)
 	}
 	return matrix;
 }
-
 // Function to add two matrices
 int **addMatrices(int **matrix1, int **matrix2, int rows, int cols)
 {
